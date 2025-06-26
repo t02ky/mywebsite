@@ -1,0 +1,46 @@
+/* フォント設定 */
+body {
+    font-family: 'Cascadia Code', 'Courier New', 'Noto Sans JP';
+    background-color: #010933;
+    color: white;
+}
+
+@keyframes blink-effect {
+
+    /* * アニメーションの中間点(50%)で、要素の不透明度(opacity)を0にします。
+             * これにより、要素が消えたように見えます。
+            */
+    50% {
+        opacity: 0;
+    }
+}
+
+/* * 点滅エフェクトを適用するためのクラスです。
+         * このクラスが追加された要素は、上で定義したアニメーションが適用されます。
+        */
+.blinking {
+    /* * animationプロパティ: [アニメーション名] [継続時間] [タイミング関数] [繰り返し回数]
+             * blink-effectを1秒かけて実行し、無限に(infinite)繰り返します。
+            */
+    animation: blink-effect 1s linear infinite;
+}
+
+/* スクロールでフェードインする要素の初期状態 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* スクロールで表示された時の状態 */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ヘッダーの背景を少し透明に */
+header {
+
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+}
