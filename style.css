@@ -5,6 +5,16 @@ body {
     color: white;
 }
 
+@keyframes scrollAnime {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
 @keyframes blink-effect {
 
     /* * アニメーションの中間点(50%)で、要素の不透明度(opacity)を0にします。
